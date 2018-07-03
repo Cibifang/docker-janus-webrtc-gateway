@@ -31,4 +31,7 @@ COPY conf/*.cfg /opt/janus/etc/janus/
 EXPOSE 80 7088 8088 8188
 
 # Define the default start-up command
-CMD ./startup.sh
+# CMD ./startup.sh
+
+# Use ENTRYPOINT instand CMD
+ENTRYPOINT [ "/opt/janus/bin/janus" ]
